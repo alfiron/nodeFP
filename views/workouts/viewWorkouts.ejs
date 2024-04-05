@@ -1,0 +1,25 @@
+<%- include('../layouts/mainLayout', { title: 'Login' }) %>
+
+
+<main>
+    <h1>All Workouts</h1>
+    <ul>
+        <% workouts.forEach(workout => { %>
+            <li>Title: <%= workout.title %></li>
+            <li>Description: <%= workout.description %></li>
+            <li>Sport Type: <%= workout.sportType %></li>
+            <li>Difficulty Level: <%= workout.difficultyLevel %></li>
+            <li>Duration: <%= workout.duration %> minutes</li>
+            <li>Exercises:</li>
+            <ul>
+                <% workout.exercises.forEach(exercise => { %>
+                    <li><%= exercise %></li>
+                <% }); %>
+            </ul>
+            <li>Trainer Notes: <%= workout.trainerNotes %></li>
+            <li>Is Cancelled: <%= workout.isCancelled ? 'Yes' : 'No' %></li>
+            <li>Rating: <%= workout.rating %></li>
+            
+        <% }); %>
+    </ul>
+</main>

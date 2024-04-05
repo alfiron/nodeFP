@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/styles/main.css">
+</head>
+<body>
+    <header>
+        <h1>Workout Manager</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/workouts">View Workouts</a></li>
+                <li><a href="/api/workouts/create">Create Workout</a></li>
+                <li><a href="/auth/login">Login</a></li>
+                <li><a href="/auth/register">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <% if (typeof body !== 'undefined') { %>
+            <%= body %> 
+        <% } %>
+    </main>
+    <footer>
+        <p>&copy; 2024 Workout Manager</p>
+    </footer>
+</body>
+</html>
